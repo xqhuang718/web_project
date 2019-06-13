@@ -35,7 +35,7 @@
                     <ul class="navbar-nav mr-auto">
                       <li><a class="nav-link" href="{{ url('recipe/create') }}">@lang('create')</a></li>
                       <li><a class="nav-link" href="{{ url('myrecipe') }}">@lang('myrecipe')</a></li>
-                      <li><a class="nav-link" href="{{ url('mycollection') }}">@lang('mycollection')</a></li>
+                      
                     </ul>
 
 

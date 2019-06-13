@@ -17,7 +17,9 @@
     </div>
   </form>
   <table class="table table-hover">
-
+      <td width="25%">Image</td>
+      <td width="25%">Name</td>
+      <td width="25%">Ingredient</td>
     @foreach($query as $var)
       <tr class="AutoNewline">
         <td width="25%">
@@ -26,8 +28,13 @@
         <td width="25%">
         <a href = "{{url('/recipe',$var->id)}}"><font size="5">{{$var->title}}</font></a>
       </td>
-      <td width="25%">
-        <font size="5">{{$var->ingredient}}</font>
+      <td width="50%">
+        <div style="width:500px;
+　　　　　　　　　　　　　white-space:nowrap;
+            　　　　　　overflow:hidden;
+            　　　　　　text-overflow:ellipsis;">
+        <font size="3">{{$var->ingredient}}</font>
+      </div>
       </td>
         <!--
         <td><a href = "{{url('/recipe',$var->id)}}">{{$var->title}}</a></td>
