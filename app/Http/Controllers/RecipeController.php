@@ -29,13 +29,11 @@ class RecipeController extends Controller
       return view('recipe.create');
     }
 
-    public function store(Request $request)
+    public function store(RecipeRequest $request)
     {
       if ($request->hasFile('image')) {
           $imageName = $request->image->store('');
           Storage::move($imageName, 'public/'.$imageName);
-        }else{
-            return 'No';
         }
       $recipe = new Recipe();
       $recipe->ingredient= $request->ingredient;

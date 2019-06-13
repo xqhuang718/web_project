@@ -20,9 +20,10 @@
   </form>
 
 </section>
-
+<section class="container">
 @if($errors->any())
-      <li>Name of Dish and Steps are required!</li>
+      <li>Field cannot be left blank!</li>
 @endif
+</section>
 
 @stop

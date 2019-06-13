@@ -41,5 +41,10 @@
     </ul>
   </div>
 </section>
+<section class="container">
+@if($errors->any())
+      <li>Comment are required!</li>
+@endif
+</section>
 
 @stop
