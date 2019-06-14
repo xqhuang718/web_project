@@ -47,7 +47,7 @@
               <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
               <input type="hidden" name="name" value="{{auth()->user()->name}}"/>
                   <li class="list-group-item">
-                  <textarea name="comment" class="form-control" cols = "30" rows="2"></textarea>
+                  <textarea name="comment" class="form-control" cols = "120" rows="2"></textarea>
                   <button class="btn btn-primary" type="submit">Reply</button>
                   </li>
           </form>

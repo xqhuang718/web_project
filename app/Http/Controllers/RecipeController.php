@@ -93,7 +93,7 @@ class RecipeController extends Controller
     {
       $search = $request->get('search');
       $ss = $request->get('ss');
-      $recipes = DB::table('recipes')->where($ss,'like','%'.$search.'%')->paginate(5);
+      $recipes = DB::table('recipes')->where($ss,'like','%'.$search.'%')->paginate(10);
       //dd($recipes);
       return view('recipe/recipes',['query'=>$recipes]);
     }
