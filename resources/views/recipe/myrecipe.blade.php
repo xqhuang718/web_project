@@ -3,6 +3,7 @@
 <section class="container">
   <h1>My Recipe</h1>
   <table class="table table-hover">
+
     @foreach($recipes as $var)
       <tr class="AutoNewline">
 

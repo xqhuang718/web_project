@@ -15,7 +15,7 @@ class RecipeController extends Controller
     //
 
     public function __construct() {
-        $this->middleware('auth',['except'=>'index','search']);
+        $this->middleware('auth',['except'=>['index','search']]);
     }
 
     public function index()
@@ -55,10 +55,15 @@ class RecipeController extends Controller
 
     public function update(Request $request,$id)
     {
+      if ($request->hasFile('image')) {
+          $imageName = $request->image->store('');
+          Storage::move($imageName, 'public/'.$imageName);
+        }
       Recipe::where('id',$id)->update([
         'title'=>$request->get('title'),
         'content'=>$request->get('content'),
-        'ingredient'=>$request->get('ingredient')
+        'ingredient'=>$request->get('ingredient'),
+        'image'=>$imageName
       ]);
       return redirect('recipe');
     }
