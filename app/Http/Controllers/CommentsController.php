@@ -17,6 +17,6 @@ class CommentsController extends Controller
       $comment->comment = $request->comment;
       $comment->name = $request->name;
       $recipe->comments()->save($comment);
-      return view('recipe.show',compact('recipe'));
+      return back();
     }
 }

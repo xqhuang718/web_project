@@ -25,7 +25,7 @@
 
     <h3>Name of Dish</h3>
     <input type = "text" name="title" class = "form-control" value="{{$query->title}}">
-    <h3>Steps</h3>
+    <h3>method</h3>
     <label for="image">Upload the image</label>
     <input type="file" name="image" id="image" class = "form-control" value="{{$query->image}}">
     <label for="content">Steps</label>

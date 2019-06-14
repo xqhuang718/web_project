@@ -57,7 +57,8 @@ class RecipeController extends Controller
     {
       Recipe::where('id',$id)->update([
         'title'=>$request->get('title'),
-        'content'=>$request->get('content')
+        'content'=>$request->get('content'),
+        'ingredient'=>$request->get('ingredient')
       ]);
       return redirect('recipe');
     }

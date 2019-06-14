@@ -42,7 +42,7 @@
 
   <div class = "row">
     <ul class="list-group">
-        <form action="{{url('recipe/'.$recipe->id.'/comment')}}" method="POST">
+        <form action="{{url('recipe/'.$recipe->id.'/comment')}}" method="post">
             {{csrf_field()}}
               <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
               <input type="hidden" name="name" value="{{auth()->user()->name}}"/>

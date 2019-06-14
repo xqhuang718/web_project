@@ -9,7 +9,7 @@
 
     <h3>Name of Dish</h3>
     <input type = "text" name="title" class = "form-control">
-    <h3>Steps</h3>
+    <h3>Method</h3>
     <label for="image">Upload the image</label>
     <input type="file" name="image" id="image" class = "form-control">
     <label for="content">Steps</label>
