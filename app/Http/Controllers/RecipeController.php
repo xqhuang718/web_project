@@ -55,6 +55,9 @@ class RecipeController extends Controller
 
     public function update(Request $request,$id)
     {
+      $query = Recipe::find($id);
+      $imageName = $query->image;
+
       if ($request->hasFile('image')) {
           $imageName = $request->image->store('');
           Storage::move($imageName, 'public/'.$imageName);
